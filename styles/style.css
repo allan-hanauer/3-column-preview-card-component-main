@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", "Big Shoulders Display", consolas;
+}
+:root {
+  --clr-pry-orange: hsl(31, 77%, 52%);
+  --clr-pry-cyan: hsl(184, 100%, 22%);
+  --clr-pry-dcyan: hsl(179, 100%, 13%);
+  --clr-neutral-1: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-2: hsl(0, 0%, 95%);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-neutral-2);
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+main {
+  display: flex;
+  max-width: 920px;
+  margin-top: 38px;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: res 1s ease-in-out;
+}
+.box-cars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 46px;
+}
+.btn {
+  background: var(--clr-neutral-2);
+  font-size: 1rem;
+  border: none;
+  height: 48px;
+  width: 150px;
+  border-radius: 22.5px;
+  transition: 0.5s;
+}
+.title {
+  font-size: 2.5rem;
+  padding-top: 32px;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", consolas;
+  color: var(--clr-neutral-2);
+}
+.txt {
+  font-size: 0.97rem;
+  color: var(--clr-neutral-1);
+  padding-top: 25px;
+  line-height: 1.5rem;
+}
+.car-1 {
+  background-color: var(--clr-pry-orange);
+}
+.car-1 .btn {
+  color: var(--clr-pry-orange);
+}
+.car-2 {
+  background-color: var(--clr-pry-cyan);
+}
+.car-2 .btn {
+  color: var(--clr-pry-cyan);
+}
+.car-3 {
+  background-color: var(--clr-pry-dcyan);
+}
+.car-3 .btn {
+  color: var(--clr-pry-dcyan);
+}
+.btn:hover {
+  border: 2px solid var(--clr-neutral-1);
+  color: var(--clr-neutral-1);
+  background: none;
+}
+footer {
+  position: absolute;
+  margin-top: 98.5vh;
+  color: var(--clr-pry-dcyan);
+}
+footer a {
+  text-decoration: none;
+  color: var(--clr-pry-orange);
+}
+@keyframes res {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    min-height: 0;
+    height: 1250px;
+  }
+  main {
+    flex-direction: column;
+    max-width: none;
+    max-height: none;
+    width: 80%;
+    height: fit-content;
+    overflow: hidden;
+  }
+  footer {
+    position: relative;
+    margin: 0;
+  }
+}
